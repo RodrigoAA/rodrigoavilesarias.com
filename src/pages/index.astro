@@ -7,6 +7,8 @@ const articulos = (await getCollection('articulos', ({ data }) => !data.draft))
 
 const formatDate = (d: Date) =>
   d.toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' });
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Base title="Rodrigo Avilés Arias">
@@ -16,7 +18,7 @@ const formatDate = (d: Date) =>
     <ul class="article-list">
       {articulos.map((post) => (
         <li>
-          <a href={`/articulos/${post.id}/`}>
+          <a href={`${base}articulos/${post.id}/`}>
             <div class="title">{post.data.title}</div>
             <div class="meta">{formatDate(post.data.date)}</div>
           </a>
