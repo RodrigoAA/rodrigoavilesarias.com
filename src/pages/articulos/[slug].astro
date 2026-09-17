@@ -15,10 +15,12 @@ const { Content } = await render(post);
 
 const formatDate = (d: Date) =>
   d.toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' });
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Base title={post.data.title} description={post.data.description}>
-  <a class="back" href="/">←</a>
+  <a class="back" href={base}>←</a>
 
   <article>
     <header class="article-header">
