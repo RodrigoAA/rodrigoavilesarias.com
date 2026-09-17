@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://rodrigoavilesarias.com',
+  site: 'https://rodrigoaa.github.io',
+  base: '/rodrigoavilesarias.com',
   output: 'static',
 });
