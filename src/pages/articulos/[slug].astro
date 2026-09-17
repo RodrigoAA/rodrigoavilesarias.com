@@ -14,13 +14,11 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 
 const formatDate = (d: Date) =>
-  d.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
+  d.toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' });
 ---
 
 <Base title={post.data.title} description={post.data.description}>
-  <header class="site-header">
-    <a href="/">← Rodrigo Avilés Arias</a>
-  </header>
+  <a class="back" href="/">←</a>
 
   <article>
     <header class="article-header">
@@ -31,8 +29,4 @@ const formatDate = (d: Date) =>
       <Content />
     </div>
   </article>
-
-  <footer class="footer">
-    <a href="/">Volver al inicio</a>
-  </footer>
 </Base>

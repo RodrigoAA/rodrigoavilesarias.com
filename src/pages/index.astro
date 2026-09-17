@@ -6,48 +6,29 @@ const articulos = (await getCollection('articulos', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
 const formatDate = (d: Date) =>
-  d.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
+  d.toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' });
 ---
 
 <Base title="Rodrigo Avilés Arias">
-  <header class="site-header">
-    <p class="meta">rodrigoavilesarias.com</p>
-  </header>
-
   <main>
     <h1>Rodrigo Avilés Arias</h1>
     <p class="lead">
-      Trabajo en producto. Escribo sobre cómo se construyen cosas útiles,
-      decisiones difíciles y lo que voy aprendiendo por el camino.
-      <!-- Edita esta bio en src/pages/index.astro -->
+      Producto. Escribo lo que voy aprendiendo.
     </p>
 
-    <section aria-labelledby="articulos-heading">
-      <h2 id="articulos-heading" class="meta" style="margin-bottom: 0.75rem; font-family: var(--sans); font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.75rem;">
-        Artículos
-      </h2>
-      {articulos.length === 0 ? (
-        <p class="lead">Pronto habrá textos aquí.</p>
-      ) : (
-        <ul class="article-list">
-          {articulos.map((post) => (
-            <li>
-              <a href={`/articulos/${post.id}/`}>
-                <h2>{post.data.title}</h2>
-                <p class="meta">{formatDate(post.data.date)}</p>
-                <p>{post.data.description}</p>
-              </a>
-            </li>
-          ))}
-        </ul>
-      )}
-    </section>
+    <ul class="article-list">
+      {articulos.map((post) => (
+        <li>
+          <a href={`/articulos/${post.id}/`}>
+            <div class="title">{post.data.title}</div>
+            <div class="meta">{formatDate(post.data.date)}</div>
+          </a>
+        </li>
+      ))}
+    </ul>
   </main>
 
   <footer class="footer">
-    <p>
-      <!-- Cambia el correo cuando quieras -->
-      <a href="mailto:hola@rodrigoavilesarias.com">hola@rodrigoavilesarias.com</a>
-    </p>
+    <a href="mailto:hola@rodrigoavilesarias.com">hola@rodrigoavilesarias.com</a>
   </footer>
 </Base>
