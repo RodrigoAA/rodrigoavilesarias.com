@@ -1,6 +1,6 @@
 ---
-title: Service Design en 10 minutos
-description: Guía corta de Service Design: qué es, cómo se practica y cuándo usarlo.
+title: "Service Design en 10 minutos"
+description: "Guía corta de Service Design: qué es, cómo se practica y cuándo usarlo."
 date: 2026-09-18
 draft: false
 ---
