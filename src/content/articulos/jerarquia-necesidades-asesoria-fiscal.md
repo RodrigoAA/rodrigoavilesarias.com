@@ -33,7 +33,7 @@ De abajo arriba, lo que el cliente necesita del servicio:
     <rect x="30" y="160" width="260" height="34" rx="3" opacity="0.40"/>
     <text x="160" y="181" text-anchor="middle">2 · Cargo</text>
 
-    <rect class="tier-base" x="10" y="198" width="300" height="34" rx="3" opacity="0.92"/>
+    <rect x="10" y="198" width="300" height="34" rx="3" opacity="0.92"/>
     <text class="tier-base-label" x="160" y="219" text-anchor="middle">1 · Seguridad</text>
   </g>
 </svg>
