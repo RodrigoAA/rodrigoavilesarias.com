@@ -99,7 +99,6 @@ h1 {
 
 .article-list .title {
   font-size: 1.1875rem;
-  font-weight: 550;
   font-weight: 500;
   letter-spacing: -0.015em;
   line-height: 1.35;
@@ -218,6 +217,42 @@ h1 {
   border-bottom: none;
 }
 
+/* Visuals for hierarchy article */
+.prose .hierarchy {
+  margin: 1.5rem 0 2rem;
+  padding: 0;
+}
+
+.prose .hierarchy svg {
+  display: block;
+  width: 100%;
+  max-width: 22rem;
+  margin-inline: auto;
+  color: var(--fg);
+}
+
+.prose .hierarchy .tier-base-label {
+  fill: var(--bg);
+}
+
+.prose .hierarchy figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  color: var(--muted);
+  text-align: center;
+}
+
+.prose .pullquote {
+  margin: 1.5rem 0 1.75rem;
+  padding: 0.85rem 0 0.85rem 1rem;
+  border-left: 2px solid var(--fg);
+  font-size: 1.35rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+}
+
 @media (min-width: 640px) {
   .wrap {
     width: min(100% - 2.5rem, var(--max));
@@ -241,6 +276,10 @@ h1 {
   .prose h2,
   .prose h3 {
     font-size: 1.1875rem;
+  }
+
+  .prose .pullquote {
+    font-size: 1.25rem;
   }
 }
 

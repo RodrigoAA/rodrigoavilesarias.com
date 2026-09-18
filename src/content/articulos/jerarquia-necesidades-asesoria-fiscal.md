@@ -13,6 +13,33 @@ Esa compra se ordena. No todas las necesidades pesan igual, y el despacho de tod
 
 De abajo arriba, lo que el cliente necesita del servicio:
 
+<figure class="hierarchy" aria-label="Jerarquía de necesidades del servicio de asesoría">
+<svg viewBox="0 0 320 248" width="100%" height="auto" role="img" aria-labelledby="hierarchy-title hierarchy-desc">
+  <title id="hierarchy-title">Jerarquía de seis capas</title>
+  <desc id="hierarchy-desc">Pirámide de seis niveles, de la base de seguridad a la cima de paz operativa.</desc>
+  <g fill="currentColor" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+    <rect x="110" y="8" width="100" height="34" rx="3" opacity="0.12"/>
+    <text x="160" y="29" text-anchor="middle">6 · Paz operativa</text>
+
+    <rect x="90" y="46" width="140" height="34" rx="3" opacity="0.16"/>
+    <text x="160" y="67" text-anchor="middle">5 · Continuidad</text>
+
+    <rect x="70" y="84" width="180" height="34" rx="3" opacity="0.22"/>
+    <text x="160" y="105" text-anchor="middle">4 · Claridad</text>
+
+    <rect x="50" y="122" width="220" height="34" rx="3" opacity="0.30"/>
+    <text x="160" y="143" text-anchor="middle">3 · Acierto</text>
+
+    <rect x="30" y="160" width="260" height="34" rx="3" opacity="0.40"/>
+    <text x="160" y="181" text-anchor="middle">2 · Cargo</text>
+
+    <rect x="10" y="198" width="300" height="34" rx="3" opacity="0.92"/>
+    <text class="tier-base-label" x="160" y="219" text-anchor="middle">1 · Seguridad</text>
+  </g>
+</svg>
+<figcaption>Sin la base, el resto no sostiene. El despacho clásico es fuerte en 2 y 5.</figcaption>
+</figure>
+
 ### 1. Que no me pase nada malo
 
 La base es el miedo al castigo: multas, requerimientos, haber firmado algo incorrecto. Hacienda se percibe asimétrica. El cliente quiere un intermediario que reduzca ese riesgo.
@@ -41,7 +68,9 @@ Continuidad. El asesor recuerda el piso, el divorcio, el lío de 2019. La carpet
 
 ### 6. Que me quite ruido de la cabeza
 
-En la cima está la paz operativa: yo traigo papeles y firmo; tú operas el sistema. No necesito disponibilidad 24/7. Necesito progreso creíble y la frase que apaga la ansiedad: «yo me encargo».
+En la cima está la paz operativa: yo traigo papeles y firmo; tú operas el sistema. No necesito disponibilidad 24/7. Necesito progreso creíble y la frase que apaga la ansiedad:
+
+<p class="pullquote">«Yo me encargo.»</p>
 
 ## Cómo lo cubre el asesor clásico
 
