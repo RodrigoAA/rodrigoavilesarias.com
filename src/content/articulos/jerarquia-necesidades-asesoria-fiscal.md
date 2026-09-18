@@ -17,7 +17,6 @@ De abajo arriba, lo que el cliente necesita del servicio:
 <svg viewBox="0 0 320 248" width="100%" height="auto" role="img" aria-labelledby="hierarchy-title hierarchy-desc">
   <title id="hierarchy-title">Jerarquía de seis capas</title>
   <desc id="hierarchy-desc">Pirámide de seis niveles, de la base de seguridad a la cima de paz operativa.</desc>
-  <!-- Cima → base: capas ensanchadas hacia abajo -->
   <g fill="currentColor" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
     <rect x="110" y="8" width="100" height="34" rx="3" opacity="0.14"/>
     <text x="160" y="29" text-anchor="middle" opacity="0.92">6 · Paz operativa</text>
@@ -76,14 +75,6 @@ En la cima está la paz operativa: yo traigo papeles y firmo; tú operas el sist
 ## Cómo lo cubre el asesor clásico
 
 El despacho de la calle no diseña esta jerarquía en un slide. La entrega con prácticas viejas y efectivas.
-
-| Práctica | Capa que sostiene |
-| --- | --- |
-| Cara y nombre | Cargo (2) |
-| Historial acumulado | Continuidad (5) |
-| Conversación, no formulario | Claridad (4) |
-| Actuación en tu nombre | Paz operativa (6) |
-| «Yo me encargo» | Seguridad + cargo (1–2) |
 
 **Cara y nombre.** El cliente sabe a quién llama. La responsabilidad es personal. Eso cubre el cargo mejor que cualquier logo.
 
