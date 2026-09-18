@@ -217,7 +217,6 @@ h1 {
   border-bottom: none;
 }
 
-/* Article visuals — hierarchy + pullquote */
 .prose .hierarchy {
   margin: 1.5rem 0 2rem;
   padding: 0;
@@ -229,6 +228,10 @@ h1 {
   max-width: 22rem;
   margin-inline: auto;
   color: var(--fg);
+}
+
+.prose .hierarchy .tier-base-label {
+  fill: var(--bg);
 }
 
 .prose .hierarchy figcaption {
@@ -247,7 +250,6 @@ h1 {
   font-weight: 500;
   letter-spacing: -0.02em;
   line-height: 1.35;
-  color: var(--fg);
 }
 
 @media (min-width: 640px) {
