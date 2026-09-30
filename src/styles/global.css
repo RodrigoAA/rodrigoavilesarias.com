@@ -305,3 +305,8 @@ h1 {
     min-width: 8rem;
   }
 }
+
+/* Visual: tamaño de cada tipo de contribuyente */
+.prose .sizes { margin: 1.5rem 0 2rem; padding: 0; }
+.prose .sizes svg { display: block; width: 100%; height: auto; max-width: 26rem; color: var(--fg); }
+.prose .sizes figcaption { margin-top: 0.75rem; font-size: 0.875rem; line-height: 1.45; color: var(--muted); }
