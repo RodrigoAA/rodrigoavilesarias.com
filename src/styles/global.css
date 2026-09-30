@@ -292,3 +292,16 @@ h1 {
     transition: none;
   }
 }
+
+@media (max-width: 40rem) {
+  .prose table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.9375rem;
+  }
+  .prose th,
+  .prose td {
+    min-width: 8rem;
+  }
+}
