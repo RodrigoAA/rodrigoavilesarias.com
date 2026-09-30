@@ -59,6 +59,71 @@ Hay momentos que convierten a cualquiera, durante un año, en un caso complejo: 
 
 ## En qué se diferencian, de verdad
 
+<figure class="sizes" aria-label="Cuántos hay de cada tipo de contribuyente y a quién recurren">
+<svg viewBox="0 0 320 610" width="100%" height="auto" role="img" aria-labelledby="sizes-title sizes-desc">
+  <title id="sizes-title">Millones de declaraciones tienen algo más que el borrador y nadie que les ayude</title>
+  <desc id="sizes-desc">De cada 100 declaraciones, cuántas tienen la señal típica de cada perfil, coloreadas según a quién recurre hoy ese grupo: Hacienda, uno mismo o nadie, o un gestor o asesor. Los grupos se solapan y no suman.</desc>
+  <defs><pattern id="h-hac" width="3.5" height="3.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="1.5" height="3.5" fill="#8a99ab"/></pattern><pattern id="h-solo" width="3.5" height="3.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="1.5" height="3.5" fill="#e07b24"/></pattern><pattern id="h-pro" width="3.5" height="3.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="1.5" height="3.5" fill="#2c6e6a"/></pattern></defs>
+  <g fill="currentColor" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="0" y="16" font-size="14.5" font-weight="700">Millones de declaraciones tienen algo</text>
+    <text x="0" y="35" font-size="14.5" font-weight="700">más que el borrador y nadie que les ayude</text>
+    <text x="0" y="53" font-size="10.5" opacity="0.62">De cada 100 declaraciones, cuántas son de cada perfil</text>
+    <text x="0" y="78" font-size="10" font-weight="700" letter-spacing="0.06em" fill="#8a99ab">LOS ATIENDE HACIENDA</text>
+    <rect x="0" y="82" width="320" height="1.2" fill="#8a99ab"/>
+    <text x="0" y="98" font-weight="600" font-size="12">Borrador puro</text>
+    <text x="0" y="115" font-size="10" opacity="0.62">Presenta con Renta Directa sin tocar el borrador*</text>
+    <rect x="0" y="120" width="215" height="12" rx="2" fill="currentColor" opacity="0.08"/>
+    <rect x="0" y="120" width="13.0" height="12" rx="2" fill="#8a99ab"/>
+    <rect x="13.0" y="120" width="8" height="12" fill="url(#h-hac)"/>
+    <text x="221" y="130" font-size="11.5" font-weight="600">≥ 10<tspan font-size="9" font-weight="400" opacity="0.62"> (2,4 M)</tspan></text>
+    <text x="0" y="162" font-size="10" font-weight="700" letter-spacing="0.06em" fill="#e07b24">SE LAS APAÑAN SOLOS</text>
+    <rect x="0" y="166" width="320" height="1.2" fill="#e07b24"/>
+    <text x="0" y="182" font-weight="600" font-size="12">Asalariado con matiz</text>
+    <text x="0" y="199" font-size="10" opacity="0.62">Aplica deducciones autonómicas</text>
+    <rect x="0" y="204" width="215" height="12" rx="2" fill="currentColor" opacity="0.08"/>
+    <rect x="0" y="204" width="29.7" height="12" rx="2" fill="#e07b24"/>
+    <text x="221" y="214" font-size="11.5" font-weight="600">14<tspan font-size="9" font-weight="400" opacity="0.62"> (3,4 M)</tspan></text>
+    <text x="0" y="229" font-size="10" opacity="0.62">Aporta a un plan de pensiones</text>
+    <rect x="0" y="234" width="215" height="12" rx="2" fill="currentColor" opacity="0.08"/>
+    <rect x="0" y="234" width="26.2" height="12" rx="2" fill="#e07b24"/>
+    <text x="221" y="244" font-size="11.5" font-weight="600">12<tspan font-size="9" font-weight="400" opacity="0.62"> (3,0 M)</tspan></text>
+    <text x="0" y="259" font-size="10" opacity="0.62">Deduce por vivienda comprada antes de 2013</text>
+    <rect x="0" y="264" width="215" height="12" rx="2" fill="currentColor" opacity="0.08"/>
+    <rect x="0" y="264" width="22.7" height="12" rx="2" fill="#e07b24"/>
+    <text x="221" y="274" font-size="11.5" font-weight="600">11<tspan font-size="9" font-weight="400" opacity="0.62"> (2,6 M)</tspan></text>
+    <text x="0" y="302" font-weight="600" font-size="12">Pequeño inversor</text>
+    <text x="0" y="319" font-size="10" opacity="0.62">Gana dinero vendiendo acciones, fondos o inmuebles</text>
+    <rect x="0" y="324" width="215" height="12" rx="2" fill="currentColor" opacity="0.08"/>
+    <rect x="0" y="324" width="13.8" height="12" rx="2" fill="#e07b24"/>
+    <rect x="13.8" y="324" width="8" height="12" fill="url(#h-solo)"/>
+    <text x="221" y="334" font-size="11.5" font-weight="600">≥ 10<tspan font-size="9" font-weight="400" opacity="0.62"> (2,5 M)</tspan></text>
+    <text x="0" y="362" font-weight="600" font-size="12">Casero accidental</text>
+    <text x="0" y="379" font-size="10" opacity="0.62">Declara un inmueble alquilado</text>
+    <rect x="0" y="384" width="215" height="12" rx="2" fill="currentColor" opacity="0.08"/>
+    <rect x="0" y="384" width="28.8" height="12" rx="2" fill="#e07b24"/>
+    <text x="221" y="394" font-size="11.5" font-weight="600">13<tspan font-size="9" font-weight="400" opacity="0.62"> (3,3 M)</tspan></text>
+    <text x="0" y="426" font-size="10" font-weight="700" letter-spacing="0.06em" fill="#2c6e6a">VAN A UN GESTOR O ASESOR</text>
+    <rect x="0" y="430" width="320" height="1.2" fill="#2c6e6a"/>
+    <text x="0" y="446" font-weight="600" font-size="12">Autónomo</text>
+    <text x="0" y="463" font-size="10" opacity="0.62">Tiene actividad económica</text>
+    <rect x="0" y="468" width="215" height="12" rx="2" fill="currentColor" opacity="0.08"/>
+    <rect x="0" y="468" width="26.2" height="12" rx="2" fill="#2c6e6a"/>
+    <text x="221" y="478" font-size="11.5" font-weight="600">12<tspan font-size="9" font-weight="400" opacity="0.62"> (3,0 M)</tspan></text>
+    <text x="0" y="506" font-weight="600" font-size="12">Cruza fronteras</text>
+    <text x="0" y="523" font-size="10" opacity="0.62">Deduce doble imposición internacional</text>
+    <rect x="0" y="528" width="215" height="12" rx="2" fill="currentColor" opacity="0.08"/>
+    <rect x="0" y="528" width="2.5" height="12" rx="2" fill="#2c6e6a"/>
+    <text x="221" y="538" font-size="11.5" font-weight="600">≥ 0,6<tspan font-size="9" font-weight="400" opacity="0.62"> (137.000)</tspan></text>
+    <text x="0" y="566" font-weight="600" font-size="12">Patrimonio alto</text>
+    <text x="0" y="583" font-size="10" opacity="0.62">Declara el Impuesto sobre el Patrimonio*</text>
+    <rect x="0" y="588" width="215" height="12" rx="2" fill="currentColor" opacity="0.08"/>
+    <rect x="0" y="588" width="2.5" height="12" rx="2" fill="#2c6e6a"/>
+    <text x="221" y="598" font-size="11.5" font-weight="600">1<tspan font-size="9" font-weight="400" opacity="0.62"> (228.000)</tspan></text>
+  </g>
+</svg>
+<figcaption>Sobre 24,6 millones de declaraciones; entre paréntesis, la cifra absoluta. Una declaración puede tener varias señales, así que los grupos se solapan y no suman. La punta rayada y el ≥ marcan las cifras que se quedan cortas.<br/>Fuente: AEAT, Estadística de los declarantes del IRPF, ejercicio 2024. *Campaña Renta 2025, nota de cierre de la AEAT (julio de 2026).</figcaption>
+</figure>
+
 | Tipo | Complejidad técnica | Coste del error | Necesidad dominante | A quién recurre hoy |
 | --- | --- | --- | --- | --- |
 | Borrador puro | Baja | Bajo | Rapidez | Borrador o Renta Directa |
