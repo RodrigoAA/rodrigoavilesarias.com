@@ -76,6 +76,8 @@ const generados = new Set();
 for (const n of publicas) {
   const s = n.secciones;
   const prosa = (s['lo que pienso'] || []).join('\n').replace(/^>.*$/gm, '').trim();
+  // Segunda voz: síntesis de Elon a partir de las referencias (opcional).
+  const literatura = (s['lo que dice la literatura'] || []).join('\n').replace(/^>.*$/gm, '').trim();
   const cambios = items(s['cómo ha cambiado']).map((l) => { const k = l.indexOf(':'); return k > 0 ? { fecha: l.slice(0, k).trim(), texto: l.slice(k + 1).trim() } : { fecha: '', texto: l }; });
   if (cambios.length === 1 && /^primera postura\.?$/i.test(cambios[0].texto)) cambios[0].texto = n.fm.postura;
   const relacionadas = items(s['ideas relacionadas'] || s['temas relacionados'])
@@ -93,7 +95,7 @@ for (const n of publicas) {
     '---', '',
   ].join('\n');
   const archivo = `${slugDe(n)}.md`; generados.add(archivo);
-  writeFileSync(join(DESTINO, archivo), fm + enlaza(prosa) + '\n');
+  writeFileSync(join(DESTINO, archivo), fm + enlaza(prosa) + (literatura ? '\n\n## Lo que dice la literatura\n\n' + enlaza(literatura) : '') + '\n');
 }
 for (const f of readdirSync(DESTINO)) if (f.endsWith('.md') && !generados.has(f)) { unlinkSync(join(DESTINO, f)); console.log(`− retirada de la web: ${f}`); }
 console.log(`✓ Generadas ${publicas.length} ideas en ${DESTINO}.`);
