@@ -1,29 +1,37 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import { fecha, ESTADOS, ordenIdeas, ordenAreas } from '../lib';
 
-const articulos = (await getCollection('articulos', ({ data }) => !data.draft))
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-
-const formatDate = (d: Date) =>
-  d.toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' });
-
+const ideas = (await getCollection('ideas')).sort(ordenIdeas);
+const areas = [...new Set(ideas.map((i) => i.data.area))].sort(ordenAreas);
 const base = import.meta.env.BASE_URL;
 ---
 
-<Base title="Rodrigo Avilés Arias">
-  <main>
-    <h1>Rodrigo Avilés Arias</h1>
-
-    <ul class="article-list">
-      {articulos.map((post) => (
-        <li>
-          <a href={`${base}articulos/${post.id}/`}>
-            <div class="title">{post.data.title}</div>
-            <div class="meta">{formatDate(post.data.date)}</div>
-          </a>
-        </li>
-      ))}
-    </ul>
+<Base title="Rodrigo Avilés Arias" bodyClass="home">
+  <main class="wrap">
+    <h1><a href={base}>Rodrigo Avilés Arias</a></h1>
+    <p class="lema">Lo que pienso, y cómo va cambiando.</p>
+    {areas.map((area) => (
+      <section class="area">
+        <h2>{area}</h2>
+        <ul class="ideas">
+          {ideas.filter((i) => i.data.area === area).map((i, _, delArea) => (
+            <li class={i.data.estado !== 'semilla' || delArea.some((o) => o.data.estado !== 'semilla') ? `r-${i.data.estado}` : ''}>
+              <a class="t" href={`${base}ideas/${i.id}/`}>{i.data.titulo}</a>
+              <p class="tesis">{i.data.postura}</p>
+              <div class="m"><span class={`estado ${i.data.estado}`}>{ESTADOS[i.data.estado]}</span><span>·</span><span>{fecha(i.data.actualizado)}</span></div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+    {ideas.length > 0 && (
+      <footer class="leyenda">
+        <span class="estado asentada">Asentada: la tengo clara</span>
+        <span class="estado creciendo">Creciendo: tomando forma</span>
+        <span class="estado semilla">Semilla: recién plantada</span>
+      </footer>
+    )}
   </main>
 </Base>

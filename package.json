@@ -9,7 +9,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "jardin": "node scripts/publicar-jardin.mjs",
+    "jardin:comprobar": "node scripts/publicar-jardin.mjs --comprobar"
   },
   "dependencies": {
     "astro": "^7.3.3"

@@ -50,3 +50,7 @@ Luego apunta el dominio `rodrigoavilesarias.com` (DNS) al proyecto.
 
 - Bio: `src/pages/index.astro`
 - Email del pie: mismo archivo
+
+## Ideas (jardín)
+
+La web es un jardín de ideas. Las notas viven fuera de este repo, en una bóveda privada (por defecto `/workspace/jardin/notas`). `npm run jardin` genera `src/content/ideas/` solo con las notas marcadas `publicar: true` (cabecera: titulo, slug, area, postura, estado, actualizado; secciones: Lo que pienso, Preguntas abiertas, Cómo ha cambiado, Referencias, Ideas relacionadas). Antes de generar, para si encuentra nombres privados o internos, cifras internas, borradores sin reescribir o marcas pendientes; esa lista también vive fuera del repo. Luego `npm run build` y copiar `dist/` a `docs/` (GitHub Pages).
