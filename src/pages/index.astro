@@ -1,10 +1,11 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import { fecha, ESTADOS, ordenIdeas, ordenAreas } from '../lib';
+import { fecha, ESTADOS, ordenIdeas } from '../lib';
 
 const ideas = (await getCollection('ideas')).sort(ordenIdeas);
-const areas = [...new Set(ideas.map((i) => i.data.area))].sort(ordenAreas);
+// Las semillas solo salen tenues si hay alguna idea más madura.
+const hayMaduras = ideas.some((i) => i.data.estado !== 'semilla');
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -12,20 +13,17 @@ const base = import.meta.env.BASE_URL;
   <main class="wrap">
     <h1><a href={base}>Rodrigo Avilés Arias</a></h1>
     <p class="lema">Lo que pienso, y cómo va cambiando.</p>
-    {areas.map((area) => (
-      <section class="area">
-        <h2>{area}</h2>
-        <ul class="ideas">
-          {ideas.filter((i) => i.data.area === area).map((i, _, delArea) => (
-            <li class={i.data.estado !== 'semilla' || delArea.some((o) => o.data.estado !== 'semilla') ? `r-${i.data.estado}` : ''}>
-              <a class="t" href={`${base}ideas/${i.id}/`}>{i.data.titulo}</a>
-              <p class="tesis">{i.data.postura}</p>
-              <div class="m"><span class={`estado ${i.data.estado}`}>{ESTADOS[i.data.estado]}</span><span>·</span><span>{fecha(i.data.actualizado)}</span></div>
-            </li>
-          ))}
-        </ul>
-      </section>
-    ))}
+    <section class="area">
+      <ul class="ideas">
+        {ideas.map((i) => (
+          <li class={i.data.estado !== 'semilla' || hayMaduras ? `r-${i.data.estado}` : ''}>
+            <a class="t" href={`${base}ideas/${i.id}/`}>{i.data.titulo}</a>
+            <p class="tesis">{i.data.postura}</p>
+            <div class="m"><span class={`estado ${i.data.estado}`}>{ESTADOS[i.data.estado]}</span><span>·</span><span>{fecha(i.data.actualizado)}</span></div>
+          </li>
+        ))}
+      </ul>
+    </section>
     {ideas.length > 0 && (
       <footer class="leyenda">
         <span class="estado asentada">Asentada: la tengo clara</span>

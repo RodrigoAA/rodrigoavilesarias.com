@@ -5,10 +5,19 @@ import { fecha, ESTADOS, enLinea } from '../../lib';
 
 export async function getStaticPaths() {
   const ideas = await getCollection('ideas');
-  return ideas.map((i) => ({ params: { slug: i.id }, props: { i } }));
+  return ideas.map((i) => ({
+    params: { slug: i.id },
+    props: {
+      i,
+      // Ideas que mencionan a esta: en su lista de relacionadas o con un enlace en el texto.
+      mencionadaEn: ideas
+        .filter((o) => o.id !== i.id && (o.data.relacionadas.some((r) => r.slug === i.id) || (o.body || '').includes(`../${i.id}/`)))
+        .map((o) => ({ titulo: o.data.titulo, slug: o.id })),
+    },
+  }));
 }
 
-const { i } = Astro.props;
+const { i, mencionadaEn } = Astro.props;
 const { Content } = await render(i);
 const d = i.data;
 const base = import.meta.env.BASE_URL;
@@ -53,10 +62,14 @@ const n = d.cambios.length;
       </>)}
 
       {d.relacionadas.length > 0 && (<>
-        <h2>Ideas relacionadas</h2>
+        <h2>Enlaza a</h2>
         <ul class="rel">
           {d.relacionadas.map((r) => <li>{r.slug ? <a href={`${base}ideas/${r.slug}/`}>{r.titulo}</a> : r.titulo}</li>)}
         </ul>
+      </>)}
+      {mencionadaEn.length > 0 && (<>
+        <h2>Mencionada en</h2>
+        <ul class="rel">{mencionadaEn.map((r) => <li><a href={`${base}ideas/${r.slug}/`}>{r.titulo}</a></li>)}</ul>
       </>)}
     </article>
     <footer>Esta idea cambia con el tiempo. Última actualización: {fecha(d.actualizado)}.</footer>

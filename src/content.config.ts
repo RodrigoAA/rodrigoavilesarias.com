@@ -7,7 +7,7 @@ const ideas = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/ideas' }),
   schema: z.object({
     titulo: z.string(),
-    area: z.string(),
+    area: z.string().optional(),
     postura: z.string(),
     estado: z.enum(['semilla', 'creciendo', 'asentada']),
     actualizado: z.coerce.date(),

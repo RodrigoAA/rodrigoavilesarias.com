@@ -1,6 +1,5 @@
 ---
 titulo: "La validación viene de uno mismo"
-area: "Cómo trabajo y decido"
 postura: "El feedback es un dato, no un veredicto: el criterio para valorarme tiene que ser propio."
 estado: semilla
 actualizado: 2026-10-10

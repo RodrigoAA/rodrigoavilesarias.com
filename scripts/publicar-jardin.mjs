@@ -50,7 +50,7 @@ let fallos = 0;
 for (const n of publicas) {
   const lineas = (n.titulo + '\n' + (n.fm.postura || '') + '\n' + (n.fm.area || '') + '\n' + n.cuerpo).split('\n');
   const avisa = (i, motivo) => { fallos++; console.error(`✗ ${n.archivo}:${i}  ${motivo}\n    ${lineas[i].trim().slice(0, 140)}`); };
-  for (const campo of ['area', 'postura']) if (!n.fm[campo]) { fallos++; console.error(`✗ ${n.archivo}: falta "${campo}" en la cabecera`); }
+  for (const campo of ['postura']) if (!n.fm[campo]) { fallos++; console.error(`✗ ${n.archivo}: falta "${campo}" en la cabecera`); }
   if (!['semilla', 'creciendo', 'asentada'].includes(n.fm.estado)) { fallos++; console.error(`✗ ${n.archivo}: estado debe ser semilla, creciendo o asentada`); }
   lineas.forEach((linea, i) => {
     const l = normaliza(linea);
@@ -86,7 +86,6 @@ for (const n of publicas) {
   const fm = [
     '---',
     `titulo: ${yaml(n.titulo)}`,
-    `area: ${yaml(n.fm.area)}`,
     `postura: ${yaml(n.fm.postura)}`,
     `estado: ${n.fm.estado}`,
     `actualizado: ${n.fm.actualizado || n.fm.creado}`,
