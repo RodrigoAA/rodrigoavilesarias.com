@@ -95,7 +95,7 @@ for (const n of publicas) {
     '---', '',
   ].join('\n');
   const archivo = `${slugDe(n)}.md`; generados.add(archivo);
-  writeFileSync(join(DESTINO, archivo), fm + enlaza(prosa) + (literatura ? '\n\n## Lo que dice la literatura\n\n' + enlaza(literatura) : '') + '\n');
+  writeFileSync(join(DESTINO, archivo), fm + enlaza(prosa) + (literatura ? '\n\n## Lo que dice la literatura\n\n' + enlaza(literatura).replace(/\[(\d+)\]/g, '[\[$1\]](#ref-$1)') : '') + '\n');
 }
 for (const f of readdirSync(DESTINO)) if (f.endsWith('.md') && !generados.has(f)) { unlinkSync(join(DESTINO, f)); console.log(`− retirada de la web: ${f}`); }
 console.log(`✓ Generadas ${publicas.length} ideas en ${DESTINO}.`);
