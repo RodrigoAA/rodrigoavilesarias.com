@@ -8,8 +8,8 @@ const ideas = defineCollection({
   schema: z.object({
     titulo: z.string(),
     area: z.string().optional(),
-    postura: z.string(),
-    estado: z.enum(['semilla', 'creciendo', 'asentada']),
+    postura: z.string().optional(),
+    estado: z.enum(['semilla', 'creciendo', 'asentada']).optional(),
     actualizado: z.coerce.date(),
     preguntas: z.array(z.string()).default([]),
     cambios: z.array(z.object({ fecha: z.string(), texto: z.string() })).default([]),

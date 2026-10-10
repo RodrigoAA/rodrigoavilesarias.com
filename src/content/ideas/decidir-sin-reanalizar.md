@@ -1,7 +1,5 @@
 ---
 titulo: "Decidir sin reanalizarlo todo"
-postura: "Decido con fecha y con lo que tengo; solo reabro una decisión si hay una señal nueva, no por inercia del análisis."
-estado: semilla
 actualizado: 2026-10-10
 preguntas: ["¿Qué señal concreta justifica reabrir una decisión y cuál es solo ruido?"]
 cambios: [{"fecha":"10 oct 2026","texto":"Decido con fecha y con lo que tengo; solo reabro una decisión si hay una señal nueva, no por inercia del análisis."}]

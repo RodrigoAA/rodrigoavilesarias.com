@@ -1,7 +1,5 @@
 ---
 titulo: "La validación viene de uno mismo"
-postura: "El feedback es un dato, no un veredicto: el criterio para valorarme tiene que ser propio."
-estado: semilla
 actualizado: 2026-10-10
 preguntas: ["¿Cómo distingo un criterio propio de la terquedad de no querer escuchar?","¿Qué parte de mi criterio debería poder comprobar alguien de fuera?"]
 cambios: [{"fecha":"10 oct 2026","texto":"El feedback es un dato, no un veredicto: el criterio para valorarme tiene que ser propio."}]
